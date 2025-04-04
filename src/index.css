@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary {
+    background: #d52a2a;
+  }
+  .bg-secondary {
+    background: #2f2f2f;
+  }
+  
+  .btn-primary {
+    @apply bg-black text-white mt-9 py-2 px-12 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-white;
+  }
+  
+  .btn-secondary {
+    @apply w-1/2 text-white py-2  mt-5 rounded-lg focus:ring-2 bg-primary  focus:ring-black;
+  }
+  input::placeholder {
+    font-family: font-serif;
+    color: black;
+    padding-left: 5px;
+  }
+  
+  .icon {
+    color: black;
+  }
+  .bg-full {
+    background: #eeecec;
+  }
