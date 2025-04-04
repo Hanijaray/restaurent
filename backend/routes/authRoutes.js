@@ -27,7 +27,7 @@ router.post("/login", async (req, res) => {
                   token: jwt.sign({ id: admin._id, role: admin.role }, process.env.JWT_SECRET, { expiresIn: "1h" }),
                   role: admin.role,
                   username: username,
-                  profilePic: admin.image ? `http://localhost:5000/${admin.image.replace(/\\/g, "/")}` : "https://via.placeholder.com/150"
+                  profilePic: admin.image ? `https://chraz.onrender.com/${admin.image.replace(/\\/g, "/")}` : "https://via.placeholder.com/150"
 
               });
           }
@@ -44,7 +44,7 @@ router.post("/login", async (req, res) => {
                   token: jwt.sign({ id: worker._id, role: worker.role }, process.env.JWT_SECRET, { expiresIn: "1h" }),
                   role: worker.role || admin.role,
                   username: username,
-                  profilePic: worker.image ? `http://localhost:5000/${worker.image.replace(/\\/g, "/")}` : "https://via.placeholder.com/150"
+                  profilePic: worker.image ? `https://chraz.onrender.com/${worker.image.replace(/\\/g, "/")}` : "https://via.placeholder.com/150"
 
               });
           }
